@@ -4,7 +4,7 @@ let APIhighlights = 'http://localhost:8000/highlights';
 //! highlights
 let highlightDialog = document.querySelector('#highlight-add');
 let highlightBtn = document.querySelector('.highlight-button');
-let highlights = document.querySelector('.highlights');
+let highlightsList = document.querySelector('.highlights');
 let highlightUrl = document.querySelector('#highlight-url');
 
 let cancelButton = document.getElementById('cancel');
@@ -18,17 +18,10 @@ cancelButton.addEventListener('click', function () {
     highlightDialog.close();
 });
 
-addHighlight.addEventListener('click', function () {
-    addNewHighlight();
-});
-
-async function addNewHighlight() {
+highlightBtn.addEventListener('click', async function () {
     let newHighlight = {
         url: highlightUrl.value,
     };
-    let highlight = document.createElement('div');
-    highlight.innerHTML = `<div class="highlight-item"><img src=${highlightUrl.value}></div>`;
-    highlights.prepend(highlight);
     await fetch(APIhighlights, {
         method: 'POST',
         headers: {
@@ -36,7 +29,16 @@ async function addNewHighlight() {
         },
         body: JSON.stringify(newHighlight),
     });
-    highlightUrl.value = '';
+    addHighlightRender();
+});
+
+async function addHighlightRender() {
+    let highlights = await fetch(APIhighlights).then((res) => res.json());
+    highlights.forEach((element) => {
+        let highlight = document.createElement('div');
+        highlightsList.innerHTML = `<div class="highlight-item"><img src=${element.value}></div>`;
+        highlightsList.prepend(highlight);
+    });
 }
 
 //TODO RENDER PHOTOS
@@ -87,12 +89,76 @@ addPhoto.addEventListener('click', async function () {
 
 async function render() {
     let photos = await fetch(APIphotos).then((res) => res.json());
-    console.log(photos);
     photosList.innerHTML = '';
     photos.forEach((element) => {
         photosList.innerHTML += `<div class="photo-item" id='${element.id}'><div><img src=${element.photo}></div>
-        <div><p>${element.likes}</p><p>${element.comments}</p><p>${element.views}</p></div></div>`;
+        <div><p>${element.likes}</p><p>${element.comments}</p><p>${element.views}</p></div>
+        <div class="card-buttons">
+                        <button id=${element.id} class="photo-edit">Edit</button>
+                        <button id=${element.id} onclick='deleteContact(${element.id})'>Delete</button>
+        </div></div>`;
     });
 }
 
 render();
+
+// TODO DELETE PHOTO
+
+function deleteContact(id) {
+    fetch(`${APIphotos}/${id}`, { method: 'DELETE' }).then(() => render());
+}
+
+// TODO EDIT PHOTOS
+
+// edit photo inputs
+
+let editDialog = document.getElementById('photo-edit');
+
+let likeEditInp = document.querySelector('#editLikes');
+let commentEditInp = document.querySelector('#editComments');
+let viewsEditInp = document.querySelector('#editViews');
+let photoEditInp = document.querySelector('#editPhoto');
+
+let photoEditBtn = document.querySelector('#photo-edit-btn');
+console.log(photoEditBtn);
+
+document.addEventListener('click', function (e) {
+    if (e.target.classList.contains('photo-edit')) {
+        editDialog.showModal();
+        let id = e.target.id;
+        fetch(`${APIphotos}/${id}`).then((res) =>
+            res.json().then((data) => {
+                likeEditInp.value = data.likes;
+                commentEditInp.value = data.comments;
+                viewsEditInp.value = data.views;
+                photoEditInp.value = data.photo;
+                photoEditBtn.setAttribute('id', data.id);
+            })
+        );
+    }
+});
+
+photoEditBtn.addEventListener('click', function () {
+    let id = this.id;
+    let likes = likeEditInp.value;
+    let photo = photoEditInp.value;
+    let comments = commentEditInp.value;
+    let views = viewsEditInp.value;
+
+    let editedPhoto = {
+        likes: likes,
+        photo: photo,
+        comments: comments,
+        views: views,
+    };
+    editPhoto(editedPhoto, id);
+});
+
+function editPhoto(editedPhoto, id) {
+    fetch(`${APIphotos}/${id}`, {
+        method: 'PATCH',
+        headers: { 'Content-Type': 'application/json; carset=utf-8' },
+        body: JSON.stringify(editedPhoto),
+    }).then(() => render());
+    editDialog.close();
+}
