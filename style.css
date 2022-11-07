@@ -1,0 +1,60 @@
+@font-face {
+    font-family: 'Instagram';
+    src: url(./fonts/font/InstagramSans-Regular.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Instagram', serif;
+}
+
+.content {
+    max-width: 100vh;
+    max-height: 100vw;
+    background-color: #1c1e21;
+    color: white;
+    padding: 1%;
+}
+
+.content-info {
+    width: 600px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.info-pfp img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.nickname,
+.follower-info,
+.acc-descr {
+    display: flex;
+    padding: 10px;
+}
+
+.info-block p {
+    padding: 5px 12px;
+}
+
+.highlights {
+    display: flex;
+    padding: 3%;
+    align-items: center;
+}
+
+.highlights button img {
+    width: 40px;
+}
+
+.highlight-item {
+    margin: 0 10px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: white;
+    border: 2px solid gray;
+}
