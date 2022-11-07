@@ -104,7 +104,6 @@ async function render() {
         `${APIphotos}?q=${searchValue}&_page=${currentPage}&_limit=3`
     ).then((res) => res.json());
     pagination();
-    addHighlightRender();
     photosList.innerHTML = '';
     photos.forEach((element) => {
         photosList.innerHTML += `<div class="photo-item" id='${element.id}'><div><img src=${element.photo}></div>
@@ -116,6 +115,7 @@ async function render() {
         </div></div>`;
     });
 }
+addHighlightRender();
 
 render();
 

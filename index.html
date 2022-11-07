@@ -163,14 +163,33 @@
                 </nav>
                 <!-- * PAGINATION  -->
 
-                <!--! Photos BLOCK -->
-
                 <div class="photos-block">
                     <hr />
                     <div class="photos-buttons">
-                        <button class="publication-btn">Публикации</button>
-                        <button class="saves-btn">Сохраненное</button>
-                        <button class="noted-btn">Отметки</button>
+                        <div class="btn_publick">
+                            <img
+                                src="./img/icon4.png"
+                                alt="#"
+                                class="img_btn"
+                            />
+                            <button class="publication-btn">Публикации</button>
+                        </div>
+                        <div class="save_btn">
+                            <img
+                                src="./img/ribbon.png"
+                                alt="#"
+                                class="save_img"
+                            />
+                            <button class="saves-btn">Сохраненное</button>
+                        </div>
+                        <div class="noded_btn">
+                            <img
+                                src="./img/mark.png"
+                                alt="#"
+                                class="noded_img"
+                            />
+                            <button class="noted-btn">Отметки</button>
+                        </div>
                     </div>
                     <div class="photos">
                         <div class="photo-item"></div>
@@ -182,24 +201,28 @@
                     <form method="dialog">
                         <section>
                             <input
+                                class="likes"
                                 type="text"
                                 name=""
                                 id="likes"
                                 placeholder="likes"
                             />
                             <input
+                                class="comments"
                                 type="text"
                                 name=""
                                 id="comments"
                                 placeholder="comments"
                             />
                             <input
+                                class="views"
                                 type="text"
                                 name=""
                                 id="views"
                                 placeholder="views"
                             />
                             <input
+                                class="img_url"
                                 type="text"
                                 name=""
                                 id="photo"
@@ -210,7 +233,7 @@
                             <button id="cancel2" type="reset" class="btn_close">
                                 close
                             </button>
-                            <button id="photoAdd">add</button>
+                            <button id="photoAdd" class="btn_add">add</button>
                         </menu>
                     </form>
                 </dialog>

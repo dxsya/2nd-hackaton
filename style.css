@@ -65,6 +65,22 @@
     justify-content: center;
 }
 
+.photos-buttons button {
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+
+.photos-buttons div:hover {
+    background-color: rgb(216, 216, 216);
+    transition: 0.4s;
+}
+
+.photos-buttons div {
+    margin: 0 15px;
+    padding: 2px 10px;
+}
+
 .photos {
     display: flex;
     justify-content: space-around;
@@ -93,6 +109,16 @@ dialog {
     height: 100px;
     left: 47%;
     top: 47%;
+    border-radius: 20px;
+}
+
+section input {
+    margin: 0 auto;
+}
+
+dialog input {
+    width: 100%;
+    margin: 0 auto;
 }
 
 .container {
@@ -144,4 +170,16 @@ a {
 
 p {
     display: flex;
+}
+
+.btn_publick,
+.save_btn,
+.noded_btn {
+    display: flex;
+}
+
+.btn_publick img,
+.noded_btn img {
+    width: 24px;
+    height: 24px;
 }
