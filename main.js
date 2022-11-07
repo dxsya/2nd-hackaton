@@ -48,10 +48,12 @@ addHighlight.addEventListener('click', async function () {
 
 async function addHighlightRender() {
     let highlights = await fetch(APIhighlights).then((res) => res.json());
+    console.log(highlights);
     highlights.forEach((element) => {
         let highlight = document.createElement('div');
-        highlight.innerHTML = `<div class="highlight-item"><img src=${element.value}></div>`;
+        highlight.innerHTML = `<div class="highlight-item"><img src=${element.url}></div>`;
         highlightsList.prepend(highlight);
+        console.log(element);
     });
 }
 

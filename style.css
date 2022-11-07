@@ -216,3 +216,19 @@ p {
 #photo-edit menu {
     padding-left: 60px;
 }
+
+#highlight-add {
+    width: 300px;
+    height: 130px;
+}
+
+#highlight-add input {
+    width: 90%;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+#highlight-add button {
+    margin-left: 10px;
+    margin-top: 10px;
+}
