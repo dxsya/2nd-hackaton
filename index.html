@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Instagram</title>
+    <link rel="stylesheet" href="./apadtive.css" />
     <link rel="stylesheet" href="./styleMinor.css" />
     <link rel="stylesheet" href="./style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -28,7 +29,9 @@
             </div>
             <div class="searchh">
               <img src="./img/search.png" alt="#" class="search_img" />
-              <div class="search">Поиск</div>
+              <div class="search">
+                <input type="text" id="search-input" />
+              </div>
             </div>
             <div class="safarii">
               <img src="./img/compass.png" alt="#" class="safari_img" />
@@ -61,8 +64,7 @@
         <div class="content-info">
           <div class="info-pfp">
             <img
-              src="https://sun9-
-81.userapi.com/impg/k0-KYILGwupS86bo6aQWBLQThZOBa_hv_tqcew/7rA3VKlbbJw.jpg?size=510x510&quality=96&sign=d51268350f7009eac44ade05d95d1563&c_uniq_tag=xcLsYO7h5F8a0T66dkxVBXvS8-nw6_SIf6VNNexlSaQ&type=album"
+              src="https://sun9-81.userapi.com/impg/k0-KYILGwupS86bo6aQWBLQThZOBa_hv_tqcew/7rA3VKlbbJw.jpg?size=510x510&quality=96&sign=d51268350f7009eac44ade05d95d1563&c_uniq_tag=xcLsYO7h5F8a0T66dkxVBXvS8-nw6_SIf6VNNexlSaQ&type=album"
               alt=""
             />
           </div>
@@ -72,7 +74,7 @@
               <button class="edit-profile-btn">Edit Profile</button>
             </div>
             <div class="follower-info">
-              <p>1 publication</p>
+              <p>1 publications</p>
               <p>44 followers</p>
               <p>45 follows</p>
             </div>
@@ -90,20 +92,14 @@
           </button>
         </div>
         <!--TODO Highlights modal -->
-        <dialog id="highlight-add" class="modal1">
-          <form method="dialog" class="modal1">
+        <dialog id="highlight-add">
+          <form method="dialog">
             <section>
-              <input
-                type="text"
-                name=""
-                id="highlight-url"
-                placeholder="img"
-                class="modaltext"
-              />
+              <input type="text" name="" id="highlight-url" placeholder="img" />
             </section>
             <menu>
-              <button id="cancel" type="reset" class="btn_cancel">close</button>
-              <button id="highlightAdd" class="add_btn">add</button>
+              <button id="cancel" type="reset">close</button>
+              <button id="highlightAdd">add</button>
             </menu>
           </form>
         </dialog>
@@ -111,7 +107,19 @@
 
         <!--? Highlights -->
 
-        <!--! Photos BLOCK -->
+        <!-- * PAGINATION  -->
+        <nav aria-label="Page navigation example">
+          <ul class="pagination d-flex justify-content-center">
+            <li class="page-item prev">
+              <a class="page-link" href="#"><</a>
+            </li>
+            <div class="pagination-list d-flex"></div>
+            <li class="page-item next">
+              <a class="page-link" href="#">></a>
+            </li>
+          </ul>
+        </nav>
+        <!-- * PAGINATION  -->
 
         <div class="photos-block">
           <hr />
@@ -122,11 +130,11 @@
             </div>
             <div class="save_btn">
               <img src="./img/ribbon.png" alt="#" class="save_img" />
-              <button class="saves-btn">СОХРАНЕННОЕ</button>
+              <button class="saves-btn">Сохраненное</button>
             </div>
             <div class="noded_btn">
               <img src="./img/mark.png" alt="#" class="noded_img" />
-              <button class="noted-btn">ОТМЕТКИ</button>
+              <button class="noted-btn">Отметки</button>
             </div>
           </div>
           <div class="photos">

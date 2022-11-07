@@ -1,6 +1,18 @@
 let APIphotos = 'http://localhost:8000/photos';
 let APIhighlights = 'http://localhost:8000/highlights';
 
+// search inp
+let searchInp = document.querySelector('#search-input');
+let searchValue = '';
+
+// pagination
+
+let paginationList = document.querySelector('.pagination-list');
+let prev = document.querySelector('.prev');
+let next = document.querySelector('.next');
+let pageTotal = 1;
+let currentPage = 1;
+
 //! highlights
 let highlightDialog = document.querySelector('#highlight-add');
 let highlightBtn = document.querySelector('.highlight-button');
@@ -18,7 +30,8 @@ cancelButton.addEventListener('click', function () {
     highlightDialog.close();
 });
 
-highlightBtn.addEventListener('click', async function () {
+//TODO highlights
+addHighlight.addEventListener('click', async function () {
     let newHighlight = {
         url: highlightUrl.value,
     };
@@ -36,7 +49,7 @@ async function addHighlightRender() {
     let highlights = await fetch(APIhighlights).then((res) => res.json());
     highlights.forEach((element) => {
         let highlight = document.createElement('div');
-        highlightsList.innerHTML = `<div class="highlight-item"><img src=${element.value}></div>`;
+        highlight.innerHTML = `<div class="highlight-item"><img src=${element.value}></div>`;
         highlightsList.prepend(highlight);
     });
 }
@@ -46,7 +59,6 @@ async function addHighlightRender() {
 let showModalAdd = document.querySelector('.create');
 let photoDialog = document.querySelector('#photo-add');
 let addPhoto = document.querySelector('#photoAdd');
-console.log(addPhoto);
 
 // add photo inputs
 let likeInp = document.querySelector('#likes');
@@ -88,19 +100,61 @@ addPhoto.addEventListener('click', async function () {
 });
 
 async function render() {
-    let photos = await fetch(APIphotos).then((res) => res.json());
+    let photos = await fetch(
+        `${APIphotos}?q=${searchValue}&_page=${currentPage}&_limit=3`
+    ).then((res) => res.json());
+    pagination();
     photosList.innerHTML = '';
     photos.forEach((element) => {
         photosList.innerHTML += `<div class="photo-item" id='${element.id}'><div><img src=${element.photo}></div>
-        <div><p>${element.likes}</p><p>${element.comments}</p><p>${element.views}</p></div>
+        <div class='photo-info'><p><img style="width:20px;height:20px;" src=https://cdn-icons-png.flaticon.com/512/1077/1077035.png>${element.likes}</p><p><img 
+       style="width:20px;height:20px;" src=https://cdn-icons-png.flaticon.com/512/3114/3114810.png>${element.comments}</p><p><img src=https://cdn-icons-png.flaticon.com/512/709/709612.png style="width:20px;height:20px;">${element.views}</p></div>
         <div class="card-buttons">
                         <button id=${element.id} class="photo-edit">Edit</button>
                         <button id=${element.id} onclick='deleteContact(${element.id})'>Delete</button>
         </div></div>`;
     });
 }
+addHighlightRender();
 
 render();
+
+// TODO PAGINATION
+function pagination() {
+    fetch(`${APIphotos}?q=${searchValue}`)
+        .then((res) => res.json())
+        .then((data) => {
+            pageTotal = Math.ceil(data.length / 3);
+            paginationList.innerHTML = '';
+            for (let i = 1; i <= pageTotal; i++) {
+                let page = document.createElement('li');
+                page.innerHTML = ` <li class="page-item"><a class="page-link page-number" href="#">${i}</a></li>`;
+                paginationList.append(page);
+            }
+        });
+}
+prev.addEventListener('click', () => {
+    if (currentPage <= 1) {
+        return;
+    }
+    currentPage--;
+    render();
+});
+
+next.addEventListener('click', () => {
+    if (currentPage >= pageTotal) {
+        return;
+    }
+    currentPage++;
+    render();
+});
+
+document.addEventListener('click', (e) => {
+    if (e.target.classList.contains('page-number')) {
+        currentPage = e.target.innerText;
+        render();
+    }
+});
 
 // TODO DELETE PHOTO
 
@@ -120,7 +174,6 @@ let viewsEditInp = document.querySelector('#editViews');
 let photoEditInp = document.querySelector('#editPhoto');
 
 let photoEditBtn = document.querySelector('#photo-edit-btn');
-console.log(photoEditBtn);
 
 document.addEventListener('click', function (e) {
     if (e.target.classList.contains('photo-edit')) {
@@ -162,3 +215,10 @@ function editPhoto(editedPhoto, id) {
     }).then(() => render());
     editDialog.close();
 }
+
+//TODO SEARCH
+
+searchInp.addEventListener('input', () => {
+    searchValue = searchInp.value;
+    render();
+});
