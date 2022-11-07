@@ -5,6 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="./style.css" />
+        <title>Document</title>
         <link rel="stylesheet" href="./style.css" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -16,6 +17,8 @@
     </head>
     <body>
         <div class="container">
+            <div class="sidebar"></div>
+
             <!--! Account info  -->
             <div class="content">
                 <div class="content-info">
@@ -31,6 +34,7 @@
                             <button class="edit-profile-btn">
                                 Edit Profile
                             </button>
+                            <button class="add-photo">add photo</button>
                         </div>
                         <div class="follower-info">
                             <p>1 publication</p>
@@ -46,13 +50,29 @@
                 <!--? Account info  -->
                 <!--! Highlights -->
                 <div class="highlights">
-                    <div class="highlight-item"></div>
-                    <div class="highlight-item"></div>
-                    <div class="highlight-item"></div>
-                    <button class="highlight-item">
+                    <button class="highlight-button">
                         <img src="./icons/highlight-icon.png" alt="" />
                     </button>
                 </div>
+                <!--TODO Highlights modal -->
+                <dialog id="highlight-add">
+                    <form method="dialog">
+                        <section>
+                            <input
+                                type="text"
+                                name=""
+                                id="highlight-url"
+                                placeholder="img"
+                            />
+                        </section>
+                        <menu>
+                            <button id="cancel" type="reset">close</button>
+                            <button id="highlightAdd">add</button>
+                        </menu>
+                    </form>
+                </dialog>
+                <!--TODO Highlights modal -->
+
                 <!--? Highlights -->
 
                 <!--! Photos BLOCK -->
@@ -68,6 +88,28 @@
                         <div class="photo-item"></div>
                     </div>
                 </div>
+
+                <!-- TODO PHOTO MODAL -->
+
+                <dialog id="highlight-add">
+                    <form method="dialog">
+                        <section>
+                            <input
+                                type="text"
+                                name=""
+                                id="highlight-url"
+                                placeholder="img"
+                            />
+                        </section>
+                        <menu>
+                            <button id="cancel" type="reset">close</button>
+                            <button id="highlightAdd">add</button>
+                        </menu>
+                    </form>
+                </dialog>
+                <!--TODO PHOTO MODAL -->
+
+                <!--? Photos BLOCK -->
             </div>
         </div>
         <script src="./main.js"></script>
