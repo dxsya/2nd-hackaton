@@ -7,16 +7,23 @@
 .dom {
   margin: 8px 0px;
   padding: 12px;
+  display: flex;
 }
 
 .home_img {
-  width: 10px;
-  height: 10px;
+  width: 35px;
+  height: 35px;
 }
-
+/* ? */
 .search {
   margin: 8px 0px;
   padding: 12px;
+  display: flex;
+}
+
+.search_img {
+  width: 35px;
+  height: 35px;
 }
 
 .safari {
