@@ -67,18 +67,24 @@
 
 .photos {
     display: flex;
+    justify-content: space-around;
     flex-wrap: wrap;
 }
 
 .photo-item {
-    height: 250px;
-    width: 250px;
-    margin: 10px;
+    height: 220px;
+    width: 220px;
+    margin: 22px 10px;
 }
 
 .photo-item img {
-    width: 250px;
-    height: 250px;
+    width: 220px;
+    height: 220px;
+}
+
+.photo-info {
+    display: flex;
+    justify-content: space-between;
 }
 
 dialog {
@@ -92,7 +98,7 @@ dialog {
 .container {
     display: flex;
     justify-content: space-around;
-    margin-top: 2%;
+    margin: 2% auto;
 }
 
 #photo-add {
@@ -101,4 +107,41 @@ dialog {
     width: 250px;
     height: 250px;
     padding: 25px;
+}
+
+.modal {
+    background-color: #ffff;
+    border: none;
+}
+
+.btn_close {
+    border: none;
+    border-radius: 5px;
+}
+
+.pagination {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+.pagination-list {
+    display: flex;
+}
+
+.page-item {
+    border: 1px solid black;
+    padding: 5px;
+}
+
+.page-link {
+    padding: 5px;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    display: flex;
 }

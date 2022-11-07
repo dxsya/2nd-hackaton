@@ -5,6 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Instagram</title>
+        <link rel="stylesheet" href="./apadtive.css" />
         <link rel="stylesheet" href="./styleMinor.css" />
         <link rel="stylesheet" href="./style.css" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -13,12 +14,16 @@
             href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
             rel="stylesheet"
         />
+        <link
+            href="https://fonts.cdnfonts.com/css/billabong"
+            rel="stylesheet"
+        />
         <title>Instagram</title>
     </head>
     <body>
         <div class="container">
             <div class="sidebar">
-                <div class="inst">instagram</div>
+                <div class="inst">Instagram</div>
                 <div class="menu">
                     <div class="menu_list">
                         <div class="dom">
@@ -29,15 +34,17 @@
                             />
                             <div class="home">Главная</div>
                         </div>
-                        <div class="search">
+                        <div class="searchh">
                             <img
                                 src="./img/search.png"
                                 alt="#"
                                 class="search_img"
                             />
-                            <div class="search">Поиск</div>
+                            <div class="search">
+                                <input type="text" id="search-input" />
+                            </div>
                         </div>
-                        <div class="safari">
+                        <div class="safarii">
                             <img
                                 src="./img/compass.png"
                                 alt="#"
@@ -45,15 +52,15 @@
                             />
                             <div class="safari">Интересное</div>
                         </div>
-                        <div class="direct">
+                        <div class="directt">
                             <img
-                                src="./img/direct_img.png"
+                                src="./img/messenger (2).png"
                                 alt="#"
                                 class="direct_img"
                             />
                             <div class="direct">Сообщения</div>
                         </div>
-                        <div class="content-not">
+                        <div class="content-nott">
                             <img
                                 src="./img/heart.png"
                                 alt="#"
@@ -61,7 +68,7 @@
                             />
                             <div class="notifications">Уведомления</div>
                         </div>
-                        <div class="create">
+                        <div class="creatte">
                             <img
                                 src="./img/add.png"
                                 alt="#"
@@ -69,7 +76,7 @@
                             />
                             <div class="create">Создать</div>
                         </div>
-                        <div class="profile">
+                        <div class="profille">
                             <img
                                 src="./img/account.png"
                                 alt="#"
@@ -104,7 +111,7 @@
                             </button>
                         </div>
                         <div class="follower-info">
-                            <p>1 publication</p>
+                            <p>1 publications</p>
                             <p>44 followers</p>
                             <p>45 follows</p>
                         </div>
@@ -142,6 +149,20 @@
 
                 <!--? Highlights -->
 
+                <!-- * PAGINATION  -->
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination d-flex justify-content-center">
+                        <li class="page-item prev">
+                            <a class="page-link" href="#"><</a>
+                        </li>
+                        <div class="pagination-list d-flex"></div>
+                        <li class="page-item next">
+                            <a class="page-link" href="#">></a>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- * PAGINATION  -->
+
                 <!--! Photos BLOCK -->
 
                 <div class="photos-block">
@@ -157,7 +178,7 @@
                 </div>
 
                 <!-- TODO PHOTO MODAL -->
-                <dialog id="photo-add">
+                <dialog id="photo-add" class="modal">
                     <form method="dialog">
                         <section>
                             <input
@@ -186,7 +207,9 @@
                             />
                         </section>
                         <menu>
-                            <button id="cancel2" type="reset">close</button>
+                            <button id="cancel2" type="reset" class="btn_close">
+                                close
+                            </button>
                             <button id="photoAdd">add</button>
                         </menu>
                     </form>
