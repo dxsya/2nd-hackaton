@@ -29,7 +29,7 @@
     align-content: center;
 }
 .home {
-    margin-left: 5px;
+    padding: 12px;
 }
 .home_img {
     width: 20px;
@@ -76,11 +76,15 @@
     display: flex;
 }
 
-.content {
+.content-not {
     padding: 12px;
     display: flex;
     align-items: center;
     align-content: center;
+}
+
+.notifications {
+    padding: 12px;
 }
 
 .content_img {
