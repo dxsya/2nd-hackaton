@@ -1,0 +1,50 @@
+.sidebar {
+  margin: 0px 0px 19px;
+  padding: 25px 12px 16px;
+  font-family: "Poppins", sans-serif;
+}
+/* ? HOME */
+.dom {
+  margin: 8px 0px;
+  padding: 12px;
+}
+
+.home_img {
+  width: 10px;
+  height: 10px;
+}
+
+.search {
+  margin: 8px 0px;
+  padding: 12px;
+}
+
+.safari {
+  margin: 8px 0px;
+  padding: 12px;
+}
+
+.direct {
+  margin: 8px 0px;
+  padding: 12px;
+}
+
+.content {
+  margin: 8px 0px;
+  padding: 12px;
+}
+
+.create {
+  margin: 8px 0px;
+  padding: 12px;
+}
+
+.profile {
+  margin: 8px 0px;
+  padding: 12px;
+}
+
+.yet {
+  margin: 8px 0px;
+  padding: 12px;
+}
