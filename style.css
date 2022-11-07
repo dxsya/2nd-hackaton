@@ -65,10 +65,21 @@
   justify-content: center;
 }
 
+.photos {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .photo-item {
   height: 250px;
   width: 250px;
   border: 3px solid black;
+  margin: 10px;
+}
+
+.photo-item img {
+  width: 250px;
+  height: 250px;
 }
 
 dialog {
@@ -94,11 +105,169 @@ dialog {
 }
 
 .modal {
-  background-color: #ffff;
+  border-radius: 6px;
+  background-color: rgb(208, 198, 178);
   border: none;
+}
+.likes {
+  margin: 6px;
+  width: 250px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.comments {
+  margin: 6px;
+  width: 250px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.views {
+  margin: 6px;
+  width: 250px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.img_url {
+  margin: 6px;
+  width: 250px;
+  padding: 10px;
+  box-sizing: border-box;
 }
 
 .btn_close {
   border: none;
-  border-radius: 5px;
+  border-radius: 4px;
+  width: 100px;
+  height: 25px;
+  background-color: #3f729b;
+  color: white;
+  font-size: 1.2rem;
+}
+
+.btn_add {
+  border: none;
+  border-radius: 4px;
+  width: 100px;
+  height: 25px;
+  background-color: #3f729b;
+  color: white;
+  font-size: 1.2rem;
+}
+
+.edit-profile-btn {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  border: 5px;
+  border-radius: 3px;
+  width: 100px;
+  height: 20px;
+  font-size: 1rem;
+}
+
+button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+.publication-btn {
+  border: none;
+  outline: none;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  border: 5px;
+  border-radius: 3px;
+  width: 100px;
+  height: 20px;
+  font-size: 0.8rem;
+  display: flex;
+  justify-content: center;
+}
+
+.save_btn {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  border: 5px;
+  border-radius: 3px;
+  width: 100px;
+  height: 20px;
+  font-size: 0.8rem;
+  display: flex;
+  justify-content: center;
+}
+
+.noded_btn {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  border: 5px;
+  border-radius: 3px;
+  width: 100px;
+  height: 20px;
+  font-size: 0.8rem;
+  display: flex;
+  justify-content: center;
+}
+
+.btn_publick {
+  display: flex;
+  justify-content: center;
+}
+
+.publication-btn {
+}
+
+.img_btn {
+  width: 20px;
+  height: 20px;
+}
+
+.save_img {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.noded_btn {
+  display: flex;
+  align-items: center;
+}
+
+.noded_img {
+  display: flex;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+}
+
+.btn_cancel {
+  border: none;
+  border-radius: 4px;
+  width: 70px;
+  height: 25px;
+  background-color: #3f729b;
+  color: white;
+  font-size: 1.2rem;
+}
+
+.add_btn {
+  border: none;
+  border-radius: 4px;
+  width: 70px;
+  height: 25px;
+  background-color: #3f729b;
+  color: white;
+  font-size: 1.2rem;
+}
+
+.modal1 {
+  border-radius: 6px;
+  background-color: rgb(208, 198, 178);
+  border: none;
+}
+
+.modaltext {
+  margin: 6px;
+  width: 145px;
+  padding: 10px;
+  box-sizing: border-box;
 }

@@ -61,7 +61,8 @@
         <div class="content-info">
           <div class="info-pfp">
             <img
-              src="https://sun9-81.userapi.com/impg/k0-KYILGwupS86bo6aQWBLQThZOBa_hv_tqcew/7rA3VKlbbJw.jpg?size=510x510&quality=96&sign=d51268350f7009eac44ade05d95d1563&c_uniq_tag=xcLsYO7h5F8a0T66dkxVBXvS8-nw6_SIf6VNNexlSaQ&type=album"
+              src="https://sun9-
+81.userapi.com/impg/k0-KYILGwupS86bo6aQWBLQThZOBa_hv_tqcew/7rA3VKlbbJw.jpg?size=510x510&quality=96&sign=d51268350f7009eac44ade05d95d1563&c_uniq_tag=xcLsYO7h5F8a0T66dkxVBXvS8-nw6_SIf6VNNexlSaQ&type=album"
               alt=""
             />
           </div>
@@ -89,14 +90,20 @@
           </button>
         </div>
         <!--TODO Highlights modal -->
-        <dialog id="highlight-add">
-          <form method="dialog">
+        <dialog id="highlight-add" class="modal1">
+          <form method="dialog" class="modal1">
             <section>
-              <input type="text" name="" id="highlight-url" placeholder="img" />
+              <input
+                type="text"
+                name=""
+                id="highlight-url"
+                placeholder="img"
+                class="modaltext"
+              />
             </section>
             <menu>
-              <button id="cancel" type="reset">close</button>
-              <button id="highlightAdd">add</button>
+              <button id="cancel" type="reset" class="btn_cancel">close</button>
+              <button id="highlightAdd" class="add_btn">add</button>
             </menu>
           </form>
         </dialog>
@@ -109,9 +116,18 @@
         <div class="photos-block">
           <hr />
           <div class="photos-buttons">
-            <button class="publication-btn">Публикации</button>
-            <button class="saves-btn">Сохраненное</button>
-            <button class="noted-btn">Отметки</button>
+            <div class="btn_publick">
+              <img src="./img/icon4.png" alt="#" class="img_btn" />
+              <button class="publication-btn">Публикации</button>
+            </div>
+            <div class="save_btn">
+              <img src="./img/ribbon.png" alt="#" class="save_img" />
+              <button class="saves-btn">СОХРАНЕННОЕ</button>
+            </div>
+            <div class="noded_btn">
+              <img src="./img/mark.png" alt="#" class="noded_img" />
+              <button class="noted-btn">ОТМЕТКИ</button>
+            </div>
           </div>
           <div class="photos">
             <div class="photo-item"></div>
@@ -122,18 +138,64 @@
         <dialog id="photo-add" class="modal">
           <form method="dialog">
             <section>
-              <input type="text" name="" id="likes" placeholder="likes" />
-              <input type="text" name="" id="comments" placeholder="comments" />
-              <input type="text" name="" id="views" placeholder="views" />
-              <input type="text" name="" id="photo" placeholder="img url" />
+              <input
+                class="likes"
+                type="text"
+                name=""
+                id="likes"
+                placeholder="likes"
+              />
+              <input
+                class="comments"
+                type="text"
+                name=""
+                id="comments"
+                placeholder="comments"
+              />
+              <input
+                class="views"
+                type="text"
+                name=""
+                id="views"
+                placeholder="views"
+              />
+              <input
+                class="img_url"
+                type="text"
+                name=""
+                id="photo"
+                placeholder="img url"
+              />
             </section>
             <menu>
               <button id="cancel2" type="reset" class="btn_close">close</button>
-              <button id="photoAdd">add</button>
+              <button id="photoAdd" class="btn_add">add</button>
             </menu>
           </form>
         </dialog>
         <!--TODO PHOTO MODAL -->
+
+        <!-- TODO EDIT PHOTO MODAL -->
+        <dialog id="photo-edit">
+          <form method="dialog">
+            <section>
+              <input type="text" name="" id="editLikes" placeholder="likes" />
+              <input
+                type="text"
+                name=""
+                id="editComments"
+                placeholder="comments"
+              />
+              <input type="text" name="" id="editViews" placeholder="views" />
+              <input type="text" name="" id="editPhoto" placeholder="img url" />
+            </section>
+            <menu>
+              <button id="cancel3" type="reset">close</button>
+              <button id="photo-edit-btn">Edit</button>
+            </menu>
+          </form>
+        </dialog>
+        <!--TODO EDITPHOTO MODAL -->
 
         <!--? Photos BLOCK -->
       </div>

@@ -1,31 +1,38 @@
 {
   "photos": [
     {
-      "photo": "1231231",
-      "likes": "421312",
-      "comments": "4214",
-      "views": "12321",
+      "photo": "https://sun9-12.userapi.com/impg/Icr-g-yAVs_umfKIR-LUE6pKfr1Kbz_4Lp3QUg/uMRv-iePQf0.jpg?size=510x789&quality=95&sign=060ba5e0817560a71065b9adff94438b&c_uniq_tag=wlVRryWC0grN-7YCtt9KElRc4c124GK9b71NPtJPjy4&type=album",
+      "likes": "1204",
+      "comments": "42",
+      "views": "42",
       "id": 1
     },
     {
-      "photo": "124124",
-      "likes": "1241",
-      "comments": "142412",
-      "views": "124124",
+      "photo": "https://sun9-12.userapi.com/impg/Icr-g-yAVs_umfKIR-LUE6pKfr1Kbz_4Lp3QUg/uMRv-iePQf0.jpg?size=510x789&quality=95&sign=060ba5e0817560a71065b9adff94438b&c_uniq_tag=wlVRryWC0grN-7YCtt9KElRc4c124GK9b71NPtJPjy4&type=album",
+      "likes": "2134",
+      "comments": "42",
+      "views": "42",
       "id": 2
     },
     {
-      "photo": "https://sun9-33.userapi.com/impg/Zi6xGfdQOf6IHaaGf0ei_OtLvtHInmEbkvtPUg/-NNEG42M0AQ.jpg?size=510x361&quality=96&sign=0c9a3d95a6e0e58f4a97a2db54b0b69f&c_uniq_tag=AlgIhtIlvgZC5XCSoLFzj1r_oOrRw9LHgmDf1m4_Y-Y&type=album",
-      "likes": "1241",
-      "comments": "31231",
-      "views": "421412",
+      "photo": "https://sun9-87.userapi.com/impg/BtCqc3crOel7ke8-4dK4-aRR7bq4xos71dshiQ/QH1pIMShMpQ.jpg?size=510x509&quality=96&sign=d123fe8747ae1a6d30b33f3196b61d73&c_uniq_tag=3rKMmkJwqHipVilh2gtjSs6gQWMA7g8_AyVMCX9rmkg&type=album",
+      "likes": "1240",
+      "comments": "3124",
+      "views": "312",
       "id": 3
     },
     {
+<<<<<<< HEAD
       "photo": "43",
       "likes": "577",
       "comments": "342",
       "views": "23",
+=======
+      "photo": "https://sun9-87.userapi.com/impg/BtCqc3crOel7ke8-4dK4-aRR7bq4xos71dshiQ/QH1pIMShMpQ.jpg?size=510x509&quality=96&sign=d123fe8747ae1a6d30b33f3196b61d73&c_uniq_tag=3rKMmkJwqHipVilh2gtjSs6gQWMA7g8_AyVMCX9rmkg&type=album",
+      "likes": "13004",
+      "comments": "1002",
+      "views": "1002",
+>>>>>>> 1073626aa8e4e52dca1a0ede54752ce61f1b9cf2
       "id": 4
     }
   ],
@@ -41,6 +48,54 @@
     {
       "url": "asda",
       "id": 3
+    },
+    {
+      "url": "asd",
+      "id": 4
+    },
+    {
+      "url": "",
+      "id": 5
+    },
+    {
+      "url": "",
+      "id": 6
+    },
+    {
+      "url": "",
+      "id": 7
+    },
+    {
+      "url": "",
+      "id": 8
+    },
+    {
+      "url": "",
+      "id": 9
+    },
+    {
+      "url": "",
+      "id": 10
+    },
+    {
+      "url": "",
+      "id": 11
+    },
+    {
+      "url": "",
+      "id": 12
+    },
+    {
+      "url": "",
+      "id": 13
+    },
+    {
+      "url": "",
+      "id": 14
+    },
+    {
+      "url": "",
+      "id": 15
     }
   ]
 }
