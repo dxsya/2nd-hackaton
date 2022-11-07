@@ -20,6 +20,7 @@ let highlightsList = document.querySelector('.highlights');
 let highlightUrl = document.querySelector('#highlight-url');
 
 let cancelButton = document.getElementById('cancel');
+let cancelButton3 = document.getElementById('cancel3');
 let addHighlight = document.getElementById('highlightAdd');
 
 highlightBtn.addEventListener('click', function () {
@@ -72,6 +73,10 @@ let photosList = document.querySelector('.photos');
 
 cancelButton2.addEventListener('click', function () {
     photoDialog.close();
+});
+
+cancelButton3.addEventListener('click', function () {
+    editDialog.close();
 });
 
 showModalAdd.addEventListener('click', function () {

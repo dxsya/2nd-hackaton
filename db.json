@@ -2,9 +2,9 @@
   "photos": [
     {
       "photo": "https://sun9-12.userapi.com/impg/Icr-g-yAVs_umfKIR-LUE6pKfr1Kbz_4Lp3QUg/uMRv-iePQf0.jpg?size=510x789&quality=95&sign=060ba5e0817560a71065b9adff94438b&c_uniq_tag=wlVRryWC0grN-7YCtt9KElRc4c124GK9b71NPtJPjy4&type=album",
-      "likes": "1204",
-      "comments": "42",
-      "views": "42",
+      "likes": "123",
+      "comments": "312",
+      "views": "412",
       "id": 1
     },
     {
@@ -55,6 +55,27 @@
       "comments": "1002",
       "views": "1002",
       "id": 8
+    },
+    {
+      "photo": "",
+      "likes": "",
+      "comments": "",
+      "views": "",
+      "id": 9
+    },
+    {
+      "photo": "",
+      "likes": "",
+      "comments": "",
+      "views": "",
+      "id": 10
+    },
+    {
+      "photo": "",
+      "likes": "",
+      "comments": "",
+      "views": "",
+      "id": 11
     }
   ],
   "highlights": [

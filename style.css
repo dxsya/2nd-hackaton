@@ -114,6 +114,16 @@ dialog {
 
 section input {
     margin: 0 auto;
+    padding: 10px 0;
+}
+
+menu button {
+    width: 120px;
+    border: 1px solid black !important;
+    border-radius: 0 !important;
+    background-color: transparent;
+    margin-top: 20px;
+    margin-right: 20px;
 }
 
 dialog input {
@@ -182,4 +192,27 @@ p {
 .noded_btn img {
     width: 24px;
     height: 24px;
+}
+
+#photo-edit {
+    width: 400px;
+    height: 250px;
+    margin: 0 auto;
+    position: absolute;
+    left: 0;
+    top: 30%;
+}
+
+#photo-edit input {
+    width: 90%;
+    margin: 0 auto;
+}
+.edit-section {
+    margin: auto 0;
+    padding-left: 30px;
+    padding-top: 25px;
+}
+
+#photo-edit menu {
+    padding-left: 60px;
 }
