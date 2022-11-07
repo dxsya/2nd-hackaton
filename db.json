@@ -1,5 +1,27 @@
 {
-  "photos": [],
+  "photos": [
+    {
+      "photo": "1231231",
+      "likes": "421312",
+      "comments": "4214",
+      "views": "12321",
+      "id": 1
+    },
+    {
+      "photo": "124124",
+      "likes": "1241",
+      "comments": "142412",
+      "views": "124124",
+      "id": 2
+    },
+    {
+      "photo": "https://sun9-33.userapi.com/impg/Zi6xGfdQOf6IHaaGf0ei_OtLvtHInmEbkvtPUg/-NNEG42M0AQ.jpg?size=510x361&quality=96&sign=0c9a3d95a6e0e58f4a97a2db54b0b69f&c_uniq_tag=AlgIhtIlvgZC5XCSoLFzj1r_oOrRw9LHgmDf1m4_Y-Y&type=album",
+      "likes": "1241",
+      "comments": "31231",
+      "views": "421412",
+      "id": 3
+    }
+  ],
   "highlights": [
     {
       "id": 1,

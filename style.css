@@ -85,3 +85,11 @@ dialog {
 .container {
     display: flex;
 }
+
+#photo-add {
+    top: 30%;
+    left: 40%;
+    width: 250px;
+    height: 250px;
+    padding: 25px;
+}

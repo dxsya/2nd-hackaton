@@ -102,7 +102,6 @@
                             <button class="edit-profile-btn">
                                 Edit Profile
                             </button>
-                            <button class="add-photo">add photo</button>
                         </div>
                         <div class="follower-info">
                             <p>1 publication</p>
@@ -158,19 +157,37 @@
                 </div>
 
                 <!-- TODO PHOTO MODAL -->
-                <dialog id="highlight-add">
+                <dialog id="photo-add">
                     <form method="dialog">
                         <section>
                             <input
                                 type="text"
                                 name=""
-                                id="highlight-url"
-                                placeholder="img"
+                                id="likes"
+                                placeholder="likes"
+                            />
+                            <input
+                                type="text"
+                                name=""
+                                id="comments"
+                                placeholder="comments"
+                            />
+                            <input
+                                type="text"
+                                name=""
+                                id="views"
+                                placeholder="views"
+                            />
+                            <input
+                                type="text"
+                                name=""
+                                id="photo"
+                                placeholder="img url"
                             />
                         </section>
                         <menu>
-                            <button id="cancel" type="reset">close</button>
-                            <button id="highlightAdd">add</button>
+                            <button id="cancel2" type="reset">close</button>
+                            <button id="photoAdd">add</button>
                         </menu>
                     </form>
                 </dialog>
