@@ -1,94 +1,104 @@
 * {
-    margin: 0;
-    padding: 0;
-    font-family: 'Instagram', serif;
+  margin: 0;
+  padding: 0;
+  font-family: "Instagram", serif;
 }
 
 .content {
-    width: 65%;
-    padding: 1%;
-    display: flex;
-    flex-direction: column;
+  width: 65%;
+  padding: 1%;
+  display: flex;
+  flex-direction: column;
 }
 
 .content-info {
-    width: 600px;
-    display: flex;
-    justify-content: space-between;
+  width: 600px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .info-pfp img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
 }
 
 .nickname,
 .follower-info,
 .acc-descr {
-    display: flex;
-    padding: 10px;
+  display: flex;
+  padding: 10px;
 }
 
 .info-block p {
-    padding: 5px 12px;
+  padding: 5px 12px;
 }
 
 .highlights {
-    display: flex;
-    padding: 3%;
-    align-items: center;
+  display: flex;
+  padding: 3%;
+  align-items: center;
 }
 
 .highlights button img {
-    width: 40px;
+  width: 40px;
 }
 
 .highlight-item,
 .highlight-button {
-    margin: 0 10px;
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    background-color: white;
-    border: 2px solid gray;
+  margin: 0 10px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: white;
+  border: 2px solid gray;
 }
 
 .highlight-item img {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
 }
 
 .photos-buttons {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .photo-item {
-    height: 250px;
-    width: 250px;
-    border: 3px solid black;
+  height: 250px;
+  width: 250px;
+  border: 3px solid black;
 }
 
 dialog {
-    position: absolute;
-    width: 200px;
-    height: 100px;
-    left: 47%;
-    top: 47%;
+  position: absolute;
+  width: 200px;
+  height: 100px;
+  left: 47%;
+  top: 47%;
 }
 
 .container {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 2%;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 2%;
 }
 
 #photo-add {
-    top: 30%;
-    left: 40%;
-    width: 250px;
-    height: 250px;
-    padding: 25px;
+  top: 30%;
+  left: 40%;
+  width: 250px;
+  height: 250px;
+  padding: 25px;
+}
+
+.modal {
+  background-color: #ffff;
+  border: none;
+}
+
+.btn_close {
+  border: none;
+  border-radius: 5px;
 }
