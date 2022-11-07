@@ -10,6 +10,8 @@
     background-color: #1c1e21;
     color: white;
     padding: 1%;
+    display: flex;
+    flex-direction: column;
 }
 
 .content-info {
@@ -22,28 +24,6 @@
     width: 150px;
     height: 150px;
     border-radius: 50%;
-}
-/* ? HOME */
-.dom {
-    margin: 8px 0px;
-    padding: 12px;
-    display: flex;
-}
-
-.home_img {
-    width: 35px;
-    height: 35px;
-}
-/* ? */
-.search {
-    margin: 8px 0px;
-    padding: 12px;
-    display: flex;
-}
-
-.search_img {
-    width: 35px;
-    height: 35px;
 }
 
 .nickname,
@@ -100,4 +80,8 @@ dialog {
     height: 100px;
     left: 47%;
     top: 47%;
+}
+
+.container {
+    display: flex;
 }
